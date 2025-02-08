@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="weather-app">
+            <h1>Weather App <i class="fas fa-cloud-sun"></i></h1>
+            <div class="search-box">
+                <input type="text" placeholder="Enter a city name" id="city-input">
+                <button onclick="getWeather()"><i class="fas fa-search"></i></button>
+            </div>
+            
+            <div class="weather-info" id="weather-info">
+                <div class="temperature">
+                    <i class="weather-icon" id="weather-icon"></i>
+                    <h2><span id="temperature">--</span>°C</h2>
+                </div>
+                <div class="description" id="weather-desc">Weather description</div>
+                <div class="location" id="location">City, Country</div>
+                
+                <div class="weather-details">
+                    <div class="detail">
+                        <i class="fas fa-water"></i>
+                        <div>
+                            <p>Moisture</p>
+                            <span id="humidity">--%</span>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <i class="fas fa-wind"></i>
+                        <div>
+                            <p>Wind</p>
+                            <span id="wind-speed">-- m/s</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="maps-btn" onclick="openInMaps()">
+                    Open location in Maps
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
